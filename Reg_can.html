@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registro Candidato</title>
+  
+  <meta name="Description" content="Esta pagina le permite reclutarlo por diferentes empresas y postularse como candidato a obtener un puesto de trabajo en alguna de ellas">
+  <meta name="keywords" content="curriculum,empresas,reclutamiento,postularse,empleo">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    .row.content {height: 450px}
+    
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    label {
+      color: blue;
+    }
+    
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+
+<script>
+function validateForm() {
+    var x = document.forms["f1"]["nombre1"].value;
+    if (x == "") {
+        alert("Faltan Campos por Llenar");
+        return false;
+    }
+}
+</script>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Reg_emp.html">Registro Empresa</a></li>
+        <li><a href="Reg_can.html">Registro Candidato</a></li>
+        <li><a href="#">Ofertas de Trabajo</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a><span class="glyphicon glyphicon-log-in"></span> Usuario Registrado</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-1 sidenav">
+    </div>
+    <div class="col-sm-10 text-left"> 
+      <h1>Registro</h1>
+      <form name="f1" action="file:///C:/Users/soypo/Desktop/Proyecto-Ing-Web/Enviados2.html" onsubmit="return validateForm()" method="post"> 
+          <div class="form-group">
+          <br>
+          <label for="nom">Nombre:</label>
+          <input type="text" name="nombre1" value="" size="10" class="form-control" id="nombre1" placeholder="Ingresa nombre">
+          <br>
+          <label for="email">Email:</label>
+          <input type="text" name="text2" value="" size="10" class="form-control" id="email1" placeholder="Ingresa email">
+          <br>
+          <label for="tel">Telefono de contacto:</label>
+              <div class="form-group">
+              <div class="form-group row">
+              <div class="col-xs-2">
+                <label for="fijo">Fijo:</label>
+                <input  type="text" name="text3" value="" size="10" class="form-control" id="fijo1" placeholder="Fijo">
+                </div>
+                <div class="col-xs-3">
+                <label for="movil">Movil:</label>
+                <input  type="text" name="text4" value="" size="10" class="form-control" id="movil1" placeholder="Movil">
+                </div>
+                </div>
+</div>
+          <br>
+          <label for="login">Login:</label>
+          <input type="text" name="text5" value="" size="10" class="form-control" id="login1" placeholder="Ingresa login">
+          <br>
+          <label for="pwd">Password:</label>
+          <input type="password" name="text6" value="" size="10" class="form-control" id="pwd" placeholder="Ingresa password">
+          <br>
+          <button type="submit" class="btn btn-default">Registrarse</button>
+          <a href="Reg_can.html" class="btn btn-default" role="button">Limpiar Formulario</a>
+  </form>
+     </div>
+    </div>
+    <div class="col-sm-1 sidenav">
+    </div>
+  </div>
+</div>
+</body>
+
+<footer class="container-fluid text-center">
+  <p>&#169; Copyright 2017 - Oficial &#174;</p>
+</footer>
+</html>
